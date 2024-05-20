@@ -13,4 +13,85 @@ VALUES
 (25, 7, 7, 7),
 (30, 8, 8, 8),
 (35, 9, 9, 9),
-(40, 10, 10, 
+(40, 10, 10, 10);
+
+-- Associando produtos a fornecedores (Fornece)
+INSERT INTO Fornece (QtdFornecida, ValorCompra, CNPJ, IDProduto, NumLote)
+VALUES 
+(100, 1000.0, 12345678000101, 1, 1),
+(200, 1500.0, 23456789000102, 2, 2),
+(300, 2000.0, 34567890000103, 3, 3),
+(400, 2500.0, 45678901234504, 4, 4),
+(500, 3000.0, 56789012345605, 5, 5),
+(600, 3500.0, 12345678000101, 6, 6),
+(700, 4000.0, 23456789000102, 7, 7),
+(800, 4500.0, 34567890000103, 8, 8),
+(900, 5000.0, 45678901234504, 9, 9),
+(1000, 5500.0, 56789012345605, 10, 10);
+
+-- Associando funcionários a fornecedores (Contata)
+INSERT INTO Contata (IDFuncionario, CNPJ)
+VALUES 
+(6, 12345678000101),
+(7, 23456789000102),
+(8, 34567890000103),
+(9, 45678901234504),
+(10, 56789012345605);
+
+-- Associando compras a funcionários (Auxilia)
+INSERT INTO Auxilia (IDCompra, IDFuncionario)
+VALUES 
+(1, 6),
+(2, 7),
+(3, 8),
+(4, 9),
+(5, 10),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
+
+-- Associando produtos a validações (Reconhece)
+INSERT INTO Reconhece (IDProduto, NumLote, IDValidacao)
+VALUES 
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 3),
+(4, 4, 4),
+(5, 5, 5),
+(6, 6, 6),
+(7, 7, 7),
+(8, 8, 8),
+(9, 9, 9),
+(10, 10, 10);
+
+-- Associando validações a compras (Valida)
+INSERT INTO Valida (IDValidacao, IDCompra)
+VALUES 
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
+
+-- Associando compras a clientes (Realiza)
+INSERT INTO Realiza (IDCompra, IDCliente)
+VALUES 
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
+
+COMMIT;
