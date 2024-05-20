@@ -4,12 +4,11 @@ Trabalho de Modelagem informacional
 DDL and DML:
 | Henrique Borges:
 
-| __Avisos__
+ __Avisos__
+ 
+obs: para utilizar o DDL é necessário criar um Schema vazio e então usar os comandos de criação de tabelas 
 
-| obs: para utilizar o DDL é necessário criar um Schema
-
-| vazio e então usar os comandos de criação de tabelas
-| Irei atualizar isso em breve
+Irei atualizar isso em breve
 
 DW:
 
