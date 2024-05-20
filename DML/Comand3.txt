@@ -1,0 +1,16 @@
+BEGIN;
+
+-- Associando produtos a compras (Possui)
+INSERT INTO Possui (QtdCompra, IDCompra, IDProduto, NumLote)
+VALUES 
+(10, 1, 1, 1),
+(5, 1, 2, 2),
+(2, 2, 1, 1),
+(7, 3, 3, 3),
+(1, 4, 4, 4),
+(15, 5, 5, 5),
+(20, 6, 6, 6),
+(25, 7, 7, 7),
+(30, 8, 8, 8),
+(35, 9, 9, 9),
+(40, 10, 10, 
