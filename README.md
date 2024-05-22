@@ -2,6 +2,8 @@
 Trabalho de Modelagem informacional
 Trabalho a cerca da disciplina de modelagem informacional do 3º período de Ciência de Dados e Inteligência Artificial.
 
+Atendimento: horário 14h às 16h  Sala 6443
+
 ABP Supermercado
 
 files -> _____
