@@ -1,0 +1,70 @@
+create Schema DataWare;
+
+set search_path = DataWare;
+
+CREATE TABLE Fato_Receita_Detalhada (
+    IDFato INT PRIMARY KEY,
+    Compra_ID INT,
+    Cliente_ID INT,
+    Endereco_ID INT,
+    Produto_ID INT,
+    Fornecedor_ID INT,
+    Categoria_ID INT,
+    Data_ID INT,
+    Hora TIME,
+    Quantidade INT,
+    Valor DECIMAL(10, 2)
+);
+
+CREATE TABLE Fato_Receita_Agregada (
+    IDFato INT PRIMARY KEY,
+    Cliente_ID INT,
+    Endereco_ID INT,
+    Produto_ID INT,
+    Fornecedor_ID INT,
+    Categoria_ID INT,
+    Data_ID INT,
+    Valor_Agregado DECIMAL(10, 2)
+);
+
+CREATE TABLE Dim_Cliente (
+    Cliente_ID INT PRIMARY KEY,
+    NomeCompletoCli VARCHAR(255),
+    CPF_Cli NUMERIC(11)
+);
+
+CREATE TABLE Dim_Endereco (
+    Endereco_ID INT PRIMARY KEY,
+    LogradouroCli VARCHAR(255),
+    BairroCli VARCHAR(255),
+    MunicipioCli VARCHAR(255),
+    EstadoCli VARCHAR(255)
+);
+
+CREATE TABLE Dim_Produto (
+    Produto_ID INT PRIMARY KEY,
+    NomeProd VARCHAR(255),
+    CategoriaProd VARCHAR(255),
+    DescricaoProd VARCHAR(800)
+);
+
+CREATE TABLE Dim_Fornecedor (
+    Fornecedor_ID INT PRIMARY KEY,
+    NomeFor VARCHAR(255),
+    CNPJ NUMERIC(14)
+);
+
+CREATE TABLE Dim_Categoria (
+    Categoria_ID INT PRIMARY KEY,
+    NomeCategoria VARCHAR(255)
+);
+
+CREATE TABLE Dim_Data (
+    Data_ID INT PRIMARY KEY,
+    DataCompleta DATE,
+    DiaSemana VARCHAR(20),
+    Dia INT,
+    Mes INT,
+    Trimestre INT,
+    Ano INT
+);
