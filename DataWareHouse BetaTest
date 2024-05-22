@@ -2,8 +2,10 @@ create Schema DataWare;
 
 set search_path = DataWare;
 
+-- observação geral: os ID's estão na forma blahblah_ID, sendo que nos arquivos que o prof nos deu tá como IDBlahblah
+
 CREATE TABLE Fato_Receita_Detalhada (
-    IDFato INT PRIMARY KEY,
+    IDFato INT PRIMARY KEY, -- acho que o ID da compra pode ser a PK
     Compra_ID INT,
     Cliente_ID INT,
     Endereco_ID INT,
@@ -11,7 +13,7 @@ CREATE TABLE Fato_Receita_Detalhada (
     Fornecedor_ID INT,
     Categoria_ID INT,
     Data_ID INT,
-    Hora TIME,
+    Hora TIME, -- o ppt pede pra colocarmos horário, mas não tem horário no esquema
     Quantidade INT,
     Valor DECIMAL(10, 2)
 );
@@ -42,25 +44,25 @@ CREATE TABLE Dim_Endereco (
 );
 
 CREATE TABLE Dim_Produto (
-    Produto_ID INT PRIMARY KEY,
+    Produto_ID INT PRIMARY KEY, -- falta NumLote pra PK
     NomeProd VARCHAR(255),
-    CategoriaProd VARCHAR(255),
-    DescricaoProd VARCHAR(800)
+    CategoriaProd VARCHAR(255), -- n acho que precise de um campo categoria sendo q já tem uma dimensão categoria
+    DescricaoProd VARCHAR(800) -- desnecessário?
 );
 
 CREATE TABLE Dim_Fornecedor (
-    Fornecedor_ID INT PRIMARY KEY,
+    Fornecedor_ID INT PRIMARY KEY, -- acho que o CNPJ pode ser a PK
     NomeFor VARCHAR(255),
     CNPJ NUMERIC(14)
 );
 
-CREATE TABLE Dim_Categoria (
+CREATE TABLE Dim_Categoria ( 
     Categoria_ID INT PRIMARY KEY,
     NomeCategoria VARCHAR(255)
 );
 
-CREATE TABLE Dim_Data (
-    Data_ID INT PRIMARY KEY,
+CREATE TABLE Dim_Data ( -- qnd eu cvsei c o prof ele disse que era bom chamar essa dimensão de "Calendário"
+    Data_ID INT PRIMARY KEY, -- acho que a DataCompleta pode ser a PK
     DataCompleta DATE,
     DiaSemana VARCHAR(20),
     Dia INT,
