@@ -1,3 +1,9 @@
+
+# Verifiquem 
+# Adicionado Arquivo de DATA WARE HOUSE 
+### contém as tabelas fato agregado e detalhado de acordo com o DDL
+
+
 # MirEntrega
 Trabalho de Modelagem informacional
 Trabalho a cerca da disciplina de modelagem informacional do 3º período de Ciência de Dados e Inteligência Artificial.
