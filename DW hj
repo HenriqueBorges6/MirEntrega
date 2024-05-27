@@ -1,0 +1,84 @@
+CREATE SCHEMA DataWare;
+SET SEARCH_PATH = DataWare;
+
+-- Criando tabelas de dimensão primeiro
+CREATE TABLE Dim_Cliente (
+    Cliente_ID SERIAL PRIMARY KEY,
+    NomeCompletoCli VARCHAR(255),
+    CPF_Cli NUMERIC(11,0)
+);
+
+CREATE TABLE Dim_Endereco (
+    Endereco_ID SERIAL PRIMARY KEY,
+    LogradouroCli VARCHAR(255),
+    BairroCli VARCHAR(255),
+    MunicipioCli VARCHAR(255),
+    EstadoCli VARCHAR(255)
+);
+
+CREATE TABLE Dim_Produto (
+    Produto_ID SERIAL PRIMARY KEY,
+    NomeProd VARCHAR(255),
+    CategoriaProd VARCHAR(255),
+    DescricaoProd VARCHAR(800)
+);
+
+CREATE TABLE Dim_Fornecedor (
+    Fornecedor_ID SERIAL PRIMARY KEY,
+    NomeFor VARCHAR(255),
+    CNPJ NUMERIC(14,0)
+);
+
+CREATE TABLE Dim_Categoria (
+    Categoria_ID SERIAL PRIMARY KEY,
+    NomeCategoria VARCHAR(255)
+);
+
+CREATE TABLE Dim_Data (
+    Data_ID SERIAL PRIMARY KEY,
+    DataCompleta DATE,
+    DiaSemana VARCHAR(20),
+    Dia INT,
+    Mes INT,
+    Trimestre INT,
+    Ano INT
+);
+
+-- Agora, criando tabelas fato
+CREATE TABLE Fato_Receita_Detalhada (
+    IDFato SERIAL PRIMARY KEY,
+    Compra_ID INT,
+    Cliente_ID INT,
+    Endereco_ID INT,
+    Produto_ID INT,
+    Fornecedor_ID INT,
+    Categoria_ID INT,
+    Data_ID INT,
+    Hora TIME,
+    Quantidade INT,
+    Valor DECIMAL(10, 2),
+    FOREIGN KEY (Compra_ID) REFERENCES trabalho.Compra(IDCompra),
+    FOREIGN KEY (Cliente_ID) REFERENCES Dim_Cliente(Cliente_ID),
+    FOREIGN KEY (Endereco_ID) REFERENCES Dim_Endereco(Endereco_ID),
+    FOREIGN KEY (Produto_ID) REFERENCES Dim_Produto(Produto_ID),
+    FOREIGN KEY (Fornecedor_ID) REFERENCES Dim_Fornecedor(Fornecedor_ID),
+    FOREIGN KEY (Categoria_ID) REFERENCES Dim_Categoria(Categoria_ID),
+    FOREIGN KEY (Data_ID) REFERENCES Dim_Data(Data_ID)
+);
+
+CREATE TABLE Fato_Receita_Agregada (
+    IDFato SERIAL PRIMARY KEY,
+    Cliente_ID INT,
+    Endereco_ID INT,
+    Produto_ID INT,
+    Fornecedor_ID INT,
+    Categoria_ID INT,
+    Data_ID INT,
+    Valor_Agregado DECIMAL(10, 2),
+    FOREIGN KEY (Cliente_ID) REFERENCES Dim_Cliente(Cliente_ID),
+    FOREIGN KEY (Endereco_ID) REFERENCES Dim_Endereco(Endereco_ID),
+    FOREIGN KEY (Produto_ID) REFERENCES Dim_Produto(Produto_ID),
+    FOREIGN KEY (Fornecedor_ID) REFERENCES Dim_Fornecedor(Fornecedor_ID),
+    FOREIGN KEY (Categoria_ID) REFERENCES Dim_Categoria(Categoria_ID),
+    FOREIGN KEY (Data_ID) REFERENCES Dim_Data(Data_ID)
+);
