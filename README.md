@@ -13,6 +13,9 @@ Atendimento: horário 14h às 16h  Sala 6443
 ABP Supermercado
 
 Sequencia de comandos:
+
+DDL:
+
 DDL Supermercado ABP .txt
 
 DML:
