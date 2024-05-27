@@ -1,3 +1,4 @@
+DROP SCHEMA IF EXISTS DataWare CASCADE;
 CREATE SCHEMA DataWare;
 SET search_path = DataWare;
 
@@ -75,12 +76,12 @@ CREATE TABLE ReceitaDetalhada
 );
 
 CREATE TABLE ReceitaAgregada (
-    PRIMARY KEY IDFato,
     IDCliente INT NOT NULL,
     IDEnderecoCliente INT NOT NULL,
     IDProduto INT NOT NULL,
     CNPJ INT NOT NULL,
     IDCategoria INT NOT NULL,
     Data DATE NOT NULL,
-    ValorAgregado FLOAT
+    ValorAgregado FLOAT,
+    PRIMARY KEY IDFato
 );
