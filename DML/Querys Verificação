@@ -1,0 +1,50 @@
+-- Seleciona todos os registros da tabela administrador
+SELECT * FROM trabalho.administrador;
+
+-- Seleciona todos os registros da tabela atendente
+SELECT * FROM trabalho.atendente;
+
+-- Seleciona todos os registros da tabela auxilia
+SELECT * FROM trabalho.auxilia;
+
+-- Seleciona todos os registros da tabela cliente
+SELECT * FROM trabalho.cliente;
+
+-- Seleciona todos os registros da tabela compra
+SELECT * FROM trabalho.compra;
+
+-- Seleciona todos os registros da tabela contata
+SELECT * FROM trabalho.contata;
+
+-- Seleciona todos os registros da tabela fornece
+SELECT * FROM trabalho.fornece;
+
+-- Seleciona todos os registros da tabela fornecedor
+SELECT * FROM trabalho.fornecedor;
+
+-- Seleciona todos os registros da tabela funcionario
+SELECT * FROM trabalho.funcionario;
+
+-- Seleciona todos os registros da tabela gerente
+SELECT * FROM trabalho.gerente;
+
+-- Seleciona todos os registros da tabela portal
+SELECT * FROM trabalho.portal;
+
+-- Seleciona todos os registros da tabela possui
+SELECT * FROM trabalho.possui;
+
+-- Seleciona todos os registros da tabela produto
+SELECT * FROM trabalho.produto;
+
+-- Seleciona todos os registros da tabela realiza
+SELECT * FROM trabalho.realiza;
+
+-- Seleciona todos os registros da tabela reconhece
+SELECT * FROM trabalho.reconhece;
+
+-- Seleciona todos os registros da tabela seguranca
+SELECT * FROM trabalho.seguranca;
+
+-- Seleciona todos os registros da tabela valida
+SELECT * FROM trabalho.valida;
