@@ -12,9 +12,12 @@ Atendimento: horário 14h às 16h  Sala 6443
 
 ABP Supermercado
 
-files -> _____
-
 Sequencia de comandos:
+DDL Supermercado ABP .txt
+DML:
+Comand1.txt
+Comand2.txt
+Comand3.txt
 
 | Instruções:
 
