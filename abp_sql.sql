@@ -58,7 +58,7 @@ CREATE TABLE ReceitaDetalhada
   ValorCompra INT NOT NULL,
   QuantidadeProd INT NOT NULL,
   IDCliente INT NOT NULL,
-  IDEndereçoCliente INT NOT NULL,
+  IDEnderecoCliente INT NOT NULL,
   CNPJ INT NOT NULL,
   Data DATE NOT NULL,
   IDCompra INT NOT NULL,
