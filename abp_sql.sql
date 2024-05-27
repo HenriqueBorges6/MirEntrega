@@ -83,5 +83,5 @@ CREATE TABLE ReceitaAgregada (
     IDCategoria INT NOT NULL,
     Data DATE NOT NULL,
     ValorAgregado FLOAT,
-    PRIMARY KEY (IDFato)
+    IDFato INT PRIMARY KEY
 );
