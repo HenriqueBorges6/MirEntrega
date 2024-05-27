@@ -1,3 +1,6 @@
+CREATE SCHEMA DataWare;
+SET search_path = DataWare;
+
 CREATE TABLE Cliente
 (
   IDCliente INT NOT NULL,
