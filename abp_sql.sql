@@ -1,3 +1,7 @@
+DROP SCHEMA IF EXISTS DataWare CASCADE;
+CREATE SCHEMA DataWare;
+SET search_path = DataWare;
+
 CREATE TABLE Cliente
 (
   IDCliente INT NOT NULL,
@@ -15,14 +19,14 @@ CREATE TABLE Produto
   PRIMARY KEY (IDProduto, NumLote)
 );
 
-CREATE TABLE EndereçoCliente
+CREATE TABLE EnderecoCliente
 (
   LogradouroCli VARCHAR(255),
   BairroCli VARCHAR(255),
   EstadoCli VARCHAR(255),
   MunicipioCli VARCHAR(255),
-  IDEndereçoCliente INT NOT NULL,
-  PRIMARY KEY (IDEndereçoCliente)
+  IDEnderecoCliente INT NOT NULL,
+  PRIMARY KEY (IDEnderecoCliente)
 );
 
 CREATE TABLE Fornecedor
@@ -32,11 +36,11 @@ CREATE TABLE Fornecedor
   PRIMARY KEY (CNPJ)
 );
 
-CREATE TABLE Calendário
+CREATE TABLE Calendario
 (
   Data DATE NOT NULL,
   DiaSemana VARCHAR(20),
-  Mês INT NOT NULL,
+  Mes INT NOT NULL,
   Trimestre INT NOT NULL,
   Ano INT NOT NULL,
   PRIMARY KEY (Data)
@@ -54,7 +58,7 @@ CREATE TABLE ReceitaDetalhada
   ValorCompra INT NOT NULL,
   QuantidadeProd INT NOT NULL,
   IDCliente INT NOT NULL,
-  IDEndereçoCliente INT NOT NULL,
+  IDEnderecoCliente INT NOT NULL,
   CNPJ INT NOT NULL,
   Data DATE NOT NULL,
   IDCompra INT NOT NULL,
@@ -64,20 +68,20 @@ CREATE TABLE ReceitaDetalhada
   Quantidade INT NOT NULL,
   PRIMARY KEY (IDCompra),
   FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente),
-  FOREIGN KEY (IDEndereçoCliente) REFERENCES EndereçoCliente(IDEndereçoCliente),
+  FOREIGN KEY (IDEnderecoCliente) REFERENCES EnderecoCliente(IDEnderecoCliente),
   FOREIGN KEY (CNPJ) REFERENCES Fornecedor(CNPJ),
-  FOREIGN KEY (Data) REFERENCES Calendário(Data),
+  FOREIGN KEY (Data) REFERENCES Calendario(Data),
   FOREIGN KEY (IDProduto, NumLote) REFERENCES Produto(IDProduto, NumLote),
   FOREIGN KEY (IDCategoria) REFERENCES CategoriaProduto(IDCategoria)
 );
 
 CREATE TABLE ReceitaAgregada (
-    PRIMARY KEY IDFato,
     IDCliente INT NOT NULL,
     IDEnderecoCliente INT NOT NULL,
     IDProduto INT NOT NULL,
     CNPJ INT NOT NULL,
     IDCategoria INT NOT NULL,
     Data DATE NOT NULL,
-    ValorAgregado FLOAT
+    ValorAgregado FLOAT,
+    IDFato INT PRIMARY KEY
 );
