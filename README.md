@@ -14,9 +14,13 @@ ABP Supermercado
 
 Sequencia de comandos:
 DDL Supermercado ABP .txt
+
 DML:
+
 Comand1.txt
+
 Comand2.txt
+
 Comand3.txt
 
 | Instruções:
