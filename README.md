@@ -1,4 +1,5 @@
 # Entrega Fase 2:
+Video de apresentação: https://youtu.be/R44fESw3QLM
 
 Na pasta Dados se encontra-se comando DML em um arquivo.txt e um arquivo csv contendo uma base de dados sugerida pelo perplexityAI
 
