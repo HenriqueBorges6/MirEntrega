@@ -157,3 +157,6 @@ CREATE TABLE Realiza
   FOREIGN KEY (IDCompra) REFERENCES Compra(IDCompra),
   FOREIGN KEY (IDCliente) REFERENCES Cliente(IDCliente)
 );
+
+ALTER TABLE Produto
+ADD COLUMN DemandaTendencia VARCHAR(255);
