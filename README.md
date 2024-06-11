@@ -1,5 +1,7 @@
 # Entrega Fase 2:
 Video de apresentação: https://youtu.be/R44fESw3QLM
+Slide de apresentação: https://www.canva.com/design/DAGHyT0t1lo/Jp9NZqrcYf24vWtqZOaPdQ/view?utm_content=DAGHyT0t1lo&utm_campaign=designshare&utm_medium=link&utm_source=editor
+
 
 Na pasta Dados se encontra-se comando DML em um arquivo.txt e um arquivo csv contendo uma base de dados sugerida pelo perplexityAI
 
