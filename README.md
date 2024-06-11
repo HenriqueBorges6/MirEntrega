@@ -1,4 +1,10 @@
+# Entrega Fase 2:
 
+Na pasta Dados se encontra-se comando DML em um arquivo.txt e um arquivo csv contendo uma base de dados sugerida pelo perplexityAI
+O comando DML foi criado com intúito de possibilitar a relação entre nossa base de dados e a supermarket_csv
+
+
+----------------------------------
 # Verifiquem 
 # Adicionado Arquivo de DATA WARE HOUSE 
 ### contém as tabelas fato agregado e detalhado de acordo com o DDL
