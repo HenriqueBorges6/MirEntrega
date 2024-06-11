@@ -21,7 +21,8 @@ CREATE TABLE Dim_Produto (
     Produto_ID SERIAL PRIMARY KEY,
     NomeProd VARCHAR(255),
     CategoriaProd VARCHAR(255),
-    DescricaoProd VARCHAR(800)
+    DescricaoProd VARCHAR(800),
+    DemandaTendencia VARCHAR(255)
 );
 
 CREATE TABLE Dim_Fornecedor (
@@ -82,4 +83,17 @@ CREATE TABLE Fato_Receita_Agregada (
     FOREIGN KEY (Fornecedor_ID) REFERENCES Dim_Fornecedor(Fornecedor_ID),
     FOREIGN KEY (Categoria_ID) REFERENCES Dim_Categoria(Categoria_ID),
     FOREIGN KEY (Data_ID) REFERENCES Dim_Data(Data_ID)
+);
+
+CREATE TABLE Fato_Receita_Demanda (
+    IDFato SERIAL PRIMARY KEY,
+    Categoria_ID INT,
+    Produto_ID INT,
+    Fornecedor_ID INT,
+    DemandaTendencia VARCHAR(255),
+    Receita_Absoluta DECIMAL(10, 2),
+    Receita_Percentual DECIMAL(5, 2),
+    FOREIGN KEY (Categoria_ID) REFERENCES Dim_Categoria(Categoria_ID),
+    FOREIGN KEY (Produto_ID) REFERENCES Dim_Produto(Produto_ID),
+    FOREIGN KEY (Fornecedor_ID) REFERENCES Dim_Fornecedor(Fornecedor_ID)
 );
