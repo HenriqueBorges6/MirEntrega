@@ -1,5 +1,8 @@
 # Entrega Fase 2:
 Video de apresentação: https://youtu.be/R44fESw3QLM
+
+Em construção
+
 Slide de apresentação: https://www.canva.com/design/DAGHyT0t1lo/Jp9NZqrcYf24vWtqZOaPdQ/view?utm_content=DAGHyT0t1lo&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
 
