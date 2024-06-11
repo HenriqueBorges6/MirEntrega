@@ -34,39 +34,38 @@ INSERT INTO Produto (IDProduto, NumLote, NomeProd, CategoriaProd, DescricaoProd,
 (29, 29, 'Shrimp', 'Seafood', 'Fresh Shrimp', '2023-11-01', '2024-11-01', 8.0),
 (30, 30, 'Croissant', 'Bakery', 'Butter Croissant', '2023-11-01', '2024-11-01', 2.5);
 
--- Inserindo clientes
 INSERT INTO Cliente (IDCliente, NomeCompletoCli, LogradouroCli, BairroCli, MunicipioCli, EstadoCli, CPF_Cli, NumCartao, DataValCar, CVC, NomeCar)
 VALUES 
-(1, 'John Smith', '123 Main St', 'Downtown', 'Springfield', 'IL', 12345678901, 1234567812345678, '2025-01-01', 123, 'John Smith'),
-(2, 'Jane Doe', '456 Oak St', 'Midtown', 'Springfield', 'IL', 23456789012, 2345678923456789, '2025-02-01', 456, 'Jane Doe'),
-(3, 'Mike Johnson', '789 Pine St', 'Uptown', 'Springfield', 'IL', 34567890123, 3456789034567890, '2025-03-01', 789, 'Mike Johnson'),
-(4, 'Sarah Williams', '101 Maple St', 'Downtown', 'Springfield', 'IL', 45678901234, 4567890145678901, '2025-04-01', 321, 'Sarah Williams'),
-(5, 'Chris Davis', '202 Birch St', 'Midtown', 'Springfield', 'IL', 56789012345, 5678901256789012, '2025-05-01', 654, 'Chris Davis'),
-(6, 'Nancy Wilson', '303 Cedar St', 'Uptown', 'Springfield', 'IL', 67890123456, 6789012367890123, '2025-06-01', 987, 'Nancy Wilson'),
-(7, 'Peter Brown', '404 Elm St', 'Downtown', 'Springfield', 'IL', 78901234567, 7890123478901234, '2025-07-01', 111, 'Peter Brown'),
-(8, 'Linda Taylor', '505 Walnut St', 'Midtown', 'Springfield', 'IL', 89012345678, 8901234589012345, '2025-08-01', 222, 'Linda Taylor'),
-(9, 'James Anderson', '606 Chestnut St', 'Uptown', 'Springfield', 'IL', 90123456789, 9012345690123456, '2025-09-01', 333, 'James Anderson'),
-(10, 'Patricia Martinez', '707 Spruce St', 'Downtown', 'Springfield', 'IL', 12345678001, 1234567801234567, '2025-10-01', 444, 'Patricia Martinez'),
-(11, 'Emma Clark', '808 Willow St', 'Westside', 'Springfield', 'IL', 11122233344, 1112223311122233, '2025-11-01', 555, 'Emma Clark'),
-(12, 'Liam Lewis', '909 Pine St', 'Northside', 'Springfield', 'IL', 22233344455, 2223334422233344, '2025-12-01', 666, 'Liam Lewis'),
-(13, 'Olivia Robinson', '1010 Maple St', 'Southside', 'Springfield', 'IL', 33344455566, 3334445533344455, '2026-01-01', 777, 'Olivia Robinson'),
-(14, 'Noah Walker', '1111 Cedar St', 'Eastside', 'Springfield', 'IL', 44455566677, 4445556644455566, '2026-02-01', 888, 'Noah Walker'),
-(15, 'Ava Hall', '1212 Walnut St', 'Westside', 'Springfield', 'IL', 55566677788, 5556667755566677, '2026-03-01', 999, 'Ava Hall'),
-(16, 'William Young', '1313 Chestnut St', 'Northside', 'Springfield', 'IL', 66677788899, 6667778866677788, '2026-04-01', 111, 'William Young'),
-(17, 'Sophia King', '1414 Birch St', 'Southside', 'Springfield', 'IL', 77788899900, 7778889977788899, '2026-05-01', 222, 'Sophia King'),
-(18, 'James Martinez', '1515 Spruce St', 'Eastside', 'Springfield', 'IL', 88899900011, 8889990088899900, '2026-06-01', 333, 'James Martinez'),
-(19, 'Isabella Scott', '1616 Willow St', 'Westside', 'Springfield', 'IL', 99900011122, 9990001199900011, '2026-07-01', 444, 'Isabella Scott'),
-(20, 'Benjamin Adams', '1717 Elm St', 'Northside', 'Springfield', 'IL', 00011122233, 0001112200011122, '2026-08-01', 555, 'Benjamin Adams'),
-(21, 'Mia Collins', '1818 Oak St', 'Southside', 'Springfield', 'IL', 11122233344, 1112223311122233, '2026-09-01', 666, 'Mia Collins'),
-(22, 'Elijah Ramirez', '1919 Pine St', 'Eastside', 'Springfield', 'IL', 22233344455, 2223334422233344, '2026-10-01', 777, 'Elijah Ramirez'),
-(23, 'Amelia Nelson', '2020 Maple St', 'Westside', 'Springfield', 'IL', 33344455566, 3334445533344455, '2026-11-01', 888, 'Amelia Nelson'),
-(24, 'Lucas Turner', '2121 Cedar St', 'Northside', 'Springfield', 'IL', 44455566677, 4445556644455566, '2026-12-01', 999, 'Lucas Turner'),
-(25, 'Harper Moore', '2222 Walnut St', 'Southside', 'Springfield', 'IL', 55566677788, 5556667755566677, '2027-01-01', 111, 'Harper Moore'),
-(26, 'Henry Perez', '2323 Chestnut St', 'Eastside', 'Springfield', 'IL', 66677788899, 6667778866677788, '2027-02-01', 222, 'Henry Perez'),
-(27, 'Evelyn Walker', '2424 Birch St', 'Westside', 'Springfield', 'IL', 77788899900, 7778889977788899, '2027-03-01', 333, 'Evelyn Walker'),
-(28, 'Alexander Taylor', '2525 Spruce St', 'Northside', 'Springfield', 'IL', 88899900011, 8889990088899900, '2027-04-01', 444, 'Alexander Taylor'),
-(29, 'Abigail Harris', '2626 Willow St', 'Southside', 'Springfield', 'IL', 99900011122, 9990001199900011, '2027-05-01', 555, 'Abigail Harris'),
-(30, 'Michael Clark', '2727 Elm St', 'Eastside', 'Springfield', 'IL', 00011122233, 0001112200011122, '2027-06-01', 666, 'Michael Clark');
+(1, 'John Smith', '123 Main St', 'Downtown', 'Yangon', 'YY', 12345678901, 1234567812345678, '2025-01-01', 123, 'John Smith'),
+(2, 'Jane Doe', '456 Oak St', 'Midtown', 'Naypyitaw', 'NP', 23456789012, 2345678923456789, '2025-02-01', 456, 'Jane Doe'),
+(3, 'Mike Johnson', '789 Pine St', 'Uptown', 'Yangon', 'YY', 34567890123, 3456789034567890, '2025-03-01', 789, 'Mike Johnson'),
+(4, 'Sarah Williams', '101 Maple St', 'Downtown', 'Naypyitaw', 'NP', 45678901234, 4567890145678901, '2025-04-01', 321, 'Sarah Williams'),
+(5, 'Chris Davis', '202 Birch St', 'Midtown', 'Yangon', 'YY', 56789012345, 5678901256789012, '2025-05-01', 654, 'Chris Davis'),
+(6, 'Nancy Wilson', '303 Cedar St', 'Uptown', 'Naypyitaw', 'NP', 67890123456, 6789012367890123, '2025-06-01', 987, 'Nancy Wilson'),
+(7, 'Peter Brown', '404 Elm St', 'Downtown', 'Yangon', 'YY', 78901234567, 7890123478901234, '2025-07-01', 111, 'Peter Brown'),
+(8, 'Linda Taylor', '505 Walnut St', 'Midtown', 'Naypyitaw', 'NP', 89012345678, 8901234589012345, '2025-08-01', 222, 'Linda Taylor'),
+(9, 'James Anderson', '606 Chestnut St', 'Uptown', 'Yangon', 'YY', 90123456789, 9012345690123456, '2025-09-01', 333, 'James Anderson'),
+(10, 'Patricia Martinez', '707 Spruce St', 'Downtown', 'Naypyitaw', 'NP', 12345678001, 1234567801234567, '2025-10-01', 444, 'Patricia Martinez'),
+(11, 'Emma Clark', '808 Willow St', 'Westside', 'Yangon', 'YY', 11122233344, 1112223311122233, '2025-11-01', 555, 'Emma Clark'),
+(12, 'Liam Lewis', '909 Pine St', 'Northside', 'Naypyitaw', 'NP', 22233344455, 2223334422233344, '2025-12-01', 666, 'Liam Lewis'),
+(13, 'Olivia Robinson', '1010 Maple St', 'Southside', 'Yangon', 'YY', 33344455566, 3334445533344455, '2026-01-01', 777, 'Olivia Robinson'),
+(14, 'Noah Walker', '1111 Cedar St', 'Eastside', 'Naypyitaw', 'NP', 44455566677, 4445556644455566, '2026-02-01', 888, 'Noah Walker'),
+(15, 'Ava Hall', '1212 Walnut St', 'Westside', 'Yangon', 'YY', 55566677788, 5556667755566677, '2026-03-01', 999, 'Ava Hall'),
+(16, 'William Young', '1313 Chestnut St', 'Northside', 'Naypyitaw', 'NP', 66677788899, 6667778866677788, '2026-04-01', 111, 'William Young'),
+(17, 'Sophia King', '1414 Birch St', 'Southside', 'Yangon', 'YY', 77788899900, 7778889977788899, '2026-05-01', 222, 'Sophia King'),
+(18, 'James Martinez', '1515 Spruce St', 'Eastside', 'Naypyitaw', 'NP', 88899900011, 8889990088899900, '2026-06-01', 333, 'James Martinez'),
+(19, 'Isabella Scott', '1616 Willow St', 'Westside', 'Yangon', 'YY', 99900011122, 9990001199900011, '2026-07-01', 444, 'Isabella Scott'),
+(20, 'Benjamin Adams', '1717 Elm St', 'Northside', 'Naypyitaw', 'NP', 00011122233, 0001112200011122, '2026-08-01', 555, 'Benjamin Adams'),
+(21, 'Mia Collins', '1818 Oak St', 'Southside', 'Yangon', 'YY', 11122233344, 1112223311122233, '2026-09-01', 666, 'Mia Collins'),
+(22, 'Elijah Ramirez', '1919 Pine St', 'Eastside', 'Naypyitaw', 'NP', 22233344455, 2223334422233344, '2026-10-01', 777, 'Elijah Ramirez'),
+(23, 'Amelia Nelson', '2020 Maple St', 'Westside', 'Yangon', 'YY', 33344455566, 3334445533344455, '2026-11-01', 888, 'Amelia Nelson'),
+(24, 'Lucas Turner', '2121 Cedar St', 'Northside', 'Naypyitaw', 'NP', 44455566677, 4445556644455566, '2026-12-01', 999, 'Lucas Turner'),
+(25, 'Harper Moore', '2222 Walnut St', 'Southside', 'Yangon', 'YY', 55566677788, 5556667755566677, '2027-01-01', 111, 'Harper Moore'),
+(26, 'Henry Perez', '2323 Chestnut St', 'Eastside', 'Naypyitaw', 'NP', 66677788899, 6667778866677788, '2027-02-01', 222, 'Henry Perez'),
+(27, 'Evelyn Walker', '2424 Birch St', 'Westside', 'Yangon', 'YY', 77788899900, 7778889977788899, '2027-03-01', 333, 'Evelyn Walker'),
+(28, 'Alexander Taylor', '2525 Spruce St', 'Northside', 'Naypyitaw', 'NP', 88899900011, 8889990088899900, '2027-04-01', 444, 'Alexander Taylor'),
+(29, 'Abigail Harris', '2626 Willow St', 'Southside', 'Yangon', 'YY', 99900011122, 9990001199900011, '2027-05-01', 555, 'Abigail Harris'),
+(30, 'Michael Clark', '2727 Elm St', 'Eastside', 'Naypyitaw', 'NP', 00011122233, 0001112200011122, '2027-06-01', 666, 'Michael Clark');
 
 -- Inserindo atendentes
 INSERT INTO Atendente (IDFuncionario, NomeFunc) VALUES
@@ -81,6 +80,7 @@ INSERT INTO Atendente (IDFuncionario, NomeFunc) VALUES
 (9, 'Julia Gold'),
 (10, 'Robert Silver');
 
+-- Inserindo compras
 -- Inserindo compras
 INSERT INTO Compra (IDCompra, DataCompra, IDCliente, IDFuncionario) VALUES
 (1, '2023-11-01', 1, 1),
@@ -227,6 +227,7 @@ INSERT INTO Auxilia (IDCompra, IDFuncionario) VALUES
 (29, 9),
 (30, 10);
 
+-- Associando produtos a validações (Reconhece)
 -- Associando produtos a validações (Reconhece)
 INSERT INTO Reconhece (IDProduto, NumLote, IDValidacao) VALUES
 (1, 1, 1),
